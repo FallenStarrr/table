@@ -11,6 +11,7 @@ let rows = document.querySelectorAll('tr')
 let srchBtn =  document.querySelector('.srch')
 let btn = document.querySelector('.add')
 btn.addEventListener('click',  () => {
+   if ((fam.value || date.value  || name.value) === '') return
    let tr = document.createElement('tr')
    let td = document.createElement('td')  
    let tdFam = document.createElement('td')  
