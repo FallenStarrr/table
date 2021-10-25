@@ -58,8 +58,8 @@ for ( let cell of cells) {
      cell.parentNode.style.background = 'orange'
     //  cell.nextElementSibling.style.background = 'orange'
     //  cell.nextElementSibling.nextElementSibling.style.background = 'orange'   
-    } else {
-      // cell.parentNode.style.background = 'red'
+    } else  if (){
+      cell.parentNode.style.background = 'red'
     }
     
 }
