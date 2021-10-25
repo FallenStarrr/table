@@ -38,12 +38,11 @@ let cells = document.querySelectorAll('td')
 let rows = document.querySelectorAll('tr')
 
 
- if (res.includes(value)) {
-        for (row of rows) {
-          let val = row.querySelector('td').textContent
-          if (val !== value) {
-            row.style.visibility = 'hidden'
-          } 
-        }
- }
+for (row of rows) {
+    let cell = row.querySelector('td')
+    if (cell.textContent === value) {
+     cell.setAttribute('class', 'search') 
+    }
+}
+ 
 })
