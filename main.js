@@ -33,17 +33,17 @@ btn.addEventListener('click',  () => {
 
 window.onload = () => {
 table.innerHTML = localStorage.getItem('hi')
-if (search.value === '') {
+// if (search.value === '') {
   
-  for (let t of td) {
-    t.style.background = 'white'
-  }
+//   // for (let t of td) {
+//   //   t.style.background = 'white'
+//   // }
 
-  for (let t of tr) {
-    t.style.background = 'white'
-  }
+//   // for (let t of tr) {
+//   //   t.style.background = 'white'
+//   // }
 
-}
+// }
 
 }
 
@@ -59,10 +59,10 @@ for ( let cell of cells) {
      cell.parentNode.style.background = 'orange'
     //  cell.nextElementSibling.style.background = 'orange'
     //  cell.nextElementSibling.nextElementSibling.style.background = 'orange'   
-    } else  if (){
-      cell.parentNode.style.background = 'red'
-    }
+    // } else  if (){
+    //   cell.parentNode.style.background = 'red'
+    // }
     
 }
- 
+}
 })
