@@ -1,8 +1,12 @@
 let table = document.querySelector('tbody')
+let td = document.querySelectorAll('td')
+let tr = document.querySelectorAll('tr')
 let name = document.querySelector('.name')
   let fam = document.querySelector('#fam')
   let date = document.querySelector('#date')
 let search = document.querySelector('input[type=search]')
+let cells = document.querySelectorAll('td')
+let rows = document.querySelectorAll('tr')
 
 let srchBtn =  document.querySelector('.srch')
 let btn = document.querySelector('.add')
@@ -21,28 +25,43 @@ btn.addEventListener('click',  () => {
    const parsed = table.innerHTML
    localStorage.setItem('hi', parsed)
    name.value = ''
-    console.log(el)
+   
 }) 
 
 
 
 window.onload = () => {
 table.innerHTML = localStorage.getItem('hi')
+if (search.value === '') {
+  
+  for (let t of td) {
+    t.style.background = 'white'
+  }
+
+  for (let t of tr) {
+    t.style.background = 'white'
+  }
+
+}
+
 }
 
 srchBtn.addEventListener('click', () => {
  let value =search.value
+console.log(value)
 
-let res = localStorage.getItem('hi').toString()
 let cells = document.querySelectorAll('td')
-let rows = document.querySelectorAll('tr')
-
-
-for (row of rows) {
-    let cell = row.querySelector('td')
+console.log(cells.parentNode)
+for ( let cell of cells) {
+   
     if (cell.textContent === value) {
-     cell.setAttribute('class', 'search') 
+     cell.parentNode.style.background = 'orange'
+    //  cell.nextElementSibling.style.background = 'orange'
+    //  cell.nextElementSibling.nextElementSibling.style.background = 'orange'   
+    } else {
+      // cell.parentNode.style.background = 'red'
     }
+    
 }
  
 })
